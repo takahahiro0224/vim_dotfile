@@ -1,3 +1,20 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'Shougo/unite.vim'
+" Unite.vimで最近使ったファイルを表示できるようにする
+Plug 'Shougo/neomru.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+" コメントON/OFFを手軽に実行
+Plug 'tomtom/tcomment_vim'
+" 行末の半角スペースを可視化
+Plug 'bronson/vim-trailing-whitespace'
+" Ruby向けにendを自動挿入してくれる
+Plug 'tpope/vim-endwise'
+
+filetype plugin indent on     " required!
+call plug#end()
+
 " setting
 "文字コードをUFT-8に設定
 set fenc=utf-8
@@ -61,3 +78,7 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+syntax on
+colorscheme molokai
+set t_Co=256
